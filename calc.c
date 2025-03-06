@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
     {
         printf("Enter a command\n");
     }
-
+    printf("%c\n", *argv[2]);
     int x = (int)*argv[1] - '0';
     char sym = *argv[2];
     int y = *argv[3] - '0';
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
             res = x - y;
             break;
         default:
-            printf("Symbol not known\n");
+            printf("Symbol %c not known\n", sym);
             return 1;
     }
     printf("%d\n", res);
